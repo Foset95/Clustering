@@ -82,10 +82,10 @@ def assigner(df, centroids):
     df["closest"] = pd.Series(closest)
 
 #Plotting the points and assigning colors
-plt.ylabel("Life Expectancy in Years")
-plt.xlabel("Births per 1000 People Each Year")
 total_dist = 0
 for i in range(iters):
+    plt.ylabel("Life Expectancy in Years")
+    plt.xlabel("Births per 1000 People Each Year")
     if(i == 0):
         assigner(df, centroids)
         for x in range(len(centroids)):
